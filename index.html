@@ -490,8 +490,17 @@ function checkPassword() {
         togglePassword.textContent = type === "password" ? "👁️" : "⚪"; // Toggle icon
     });
 
-    document.getElementById("togglePassword").addEventListener("mouseup", function (event) {
-      event.preventDefault();});
+    document.getElementById("togglePassword").addEventListener("mousedown", function (event) {
+    // Prevent focus shift or text selection
+    event.preventDefault();
+    const passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+        passwordField.type = "textpass";
+    } else {
+        passwordField.type = "password";
+    }
+});
+
 
 function goToPage(pageId) {
     const containers = document.querySelectorAll(".container > div");
