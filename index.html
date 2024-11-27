@@ -452,7 +452,7 @@
 
 </div>
 <script>
-document.addEventListener('contextmenu', function(event) {
+/*document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
 
@@ -462,7 +462,7 @@ document.addEventListener('keydown', function(event) {
         (event.ctrlKey && event.key === 'U')) {
         event.preventDefault();
     }
-});
+});*/
 
 const correctPassword = "20242025";
 
@@ -490,10 +490,15 @@ togglePassword.addEventListener("click", () => {
     passwordField.type = type;
     
     // Change the icon depending on the type
-    togglePassword.textContent = type === "password" ? "👁️" : "⚪"; // '👁️' for hidden, '⚪' for visible
+    togglePassword.textContent = type === "password" ? "👁️" : "⚪";
 
     passwordInput.focus();
 });
+
+document.getElementById('togglePassword').addEventListener('click', () => {
+      document.getElementById('password').focus();
+  });
+
 
 function goToPage(pageId) {
     const containers = document.querySelectorAll(".container > div");
