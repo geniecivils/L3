@@ -490,7 +490,8 @@ function checkPassword() {
         togglePassword.textContent = type === "password" ? "👁️" : "⚪"; // Toggle icon
     });
 
-
+    document.getElementById("togglePassword").addEventListener("mouseup", function (event) {
+      event.preventDefault();});
 
 function goToPage(pageId) {
     const containers = document.querySelectorAll(".container > div");
