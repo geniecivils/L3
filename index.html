@@ -481,52 +481,14 @@ function checkPassword() {
 
 
  // Toggle password visibility
- const togglePassword = document.getElementById("togglePassword");
+    const togglePassword = document.getElementById("togglePassword");
     const passwordField = document.getElementById("password");
 
     togglePassword.addEventListener("click", () => {
         const type = passwordField.type === "password" ? "textpass" : "password";
         passwordField.type = type;
         togglePassword.textContent = type === "password" ? "👁️" : "⚪"; // Toggle icon
-    });
-
-// Function to show password
-function showPassword() {
-    passwordField.type = "textpass";
-}
-
-// Function to hide password
-function hidePassword() {
-    passwordField.type = "password";
-}
-
-// Add event listeners for desktop (mouse) and mobile (touch)
-togglePassword.addEventListener("mousedown", function (event) {
-    event.preventDefault(); // Prevent focus shift or text selection
-    showPassword();
-});
-
-togglePassword.addEventListener("mouseup", function (event) {
-    event.preventDefault(); // Prevent focus shift or text selection
-    hidePassword();
-});
-
-togglePassword.addEventListener("mouseleave", function () {
-    hidePassword(); // Ensure password is hidden if the mouse leaves the icon
-});
-
-// Mobile support
-togglePassword.addEventListener("touchstart", function (event) {
-    event.preventDefault(); // Prevent unwanted behavior on touch devices
-    showPassword();
-});
-
-togglePassword.addEventListener("touchend", function (event) {
-    event.preventDefault(); // Prevent unwanted behavior on touch devices
-    hidePassword();
-});
-
-
+    }); 
 
 function goToPage(pageId) {
     const containers = document.querySelectorAll(".container > div");
