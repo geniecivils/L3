@@ -480,15 +480,20 @@ function checkPassword() {
 }
 
 
- // Toggle password visibility
-    const togglePassword = document.getElementById("togglePassword");
-    const passwordField = document.getElementById("password");
+// Toggle password visibility
+const togglePassword = document.getElementById("togglePassword");
+const passwordField = document.getElementById("password");
 
-    togglePassword.addEventListener("click", () => {
-        const type = passwordField.type === "password" ? "textpass" : "password";
-        passwordField.type = type;
-        togglePassword.textContent = type === "password" ? "👁️" : "⚪"; // Toggle icon
-    }); 
+togglePassword.addEventListener("click", () => {
+    // Toggle the type of password field between 'password' and 'text'
+    const type = passwordField.type === "password" ? "textpass" : "password";
+    passwordField.type = type;
+    
+    // Change the icon depending on the type
+    togglePassword.textContent = type === "password" ? "👁️" : "⚪"; // '👁️' for hidden, '⚪' for visible
+
+    passwordInput.focus();
+});
 
 function goToPage(pageId) {
     const containers = document.querySelectorAll(".container > div");
