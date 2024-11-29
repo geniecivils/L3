@@ -220,7 +220,6 @@
 
     .myword:hover {
       background:  #fa886b;
-      cursor: default;
     }
 
     .mynote {
@@ -480,6 +479,7 @@
         </div>
     </div>
   </div>
+</div>
 
     <div class="model">
       <div class="model-title" onclick="togglePdfList('tech')">TECH <span>▼</span></div>
@@ -519,10 +519,11 @@
     </div>
   </div>
 
-    <button class="myword"> Je remercie tous ceux qui ont contribue à la realisation de ce travail ! <!-- <h5>CH = COUR</h5> <h5>SE = TD</h5> <h5>SO = SOLUTION</h5> --> </button>
-    <h3>powered by basset</h3>
+  <div>
+    <button class="myword"> Je remercie tous ceux qui ont contribue à la realisation de ce travail ! <!-- <h5>CH = COUR</h5> <h5>SE = TD</h5> <h5>SO = SOLUTION</h5> --> </button>    
+  <h3>powered by basset</h3>
   </div>
-
+  
   <div class="content-container" id="contentS2" style="display: none;">
     <h2>Semestre 2</h2>
     <button class="btn" onclick="returnToSelection()">RETOUR</button>
@@ -537,7 +538,7 @@
 
 </div>
 <script>
-document.addEventListener('contextmenu', function(event) {
+/*document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
 
@@ -547,7 +548,7 @@ document.addEventListener('keydown', function(event) {
         (event.ctrlKey && event.key === 'U')) {
         event.preventDefault();
     }
-});
+});*/
 
 const correctPassword = "20242025";
 
